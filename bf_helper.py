@@ -48,9 +48,11 @@ class Memory:
             if cell.is_visited():
                 # Indicate where we are
                 if counter == self.pointer:
-                    print "[%s]: %s <-- PTR" % (counter, cell.value)
+                    print "[%s]: %s \"%s\" <-- PTR" % (counter, cell.value,
+                            chr(cell.value))
                 else:
-                    print "[%s]: %s" % (counter, cell.value)
+                    print "[%s]: %s \"%s\"" % (counter, cell.value,
+                            chr(cell.value))
                 counter += 1
 
             # There should be nothing more ahead that's activated
